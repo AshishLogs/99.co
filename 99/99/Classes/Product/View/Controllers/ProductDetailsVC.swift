@@ -16,6 +16,7 @@ class ProductDetailsVC: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()

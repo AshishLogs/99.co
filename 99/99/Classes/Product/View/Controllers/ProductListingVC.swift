@@ -16,6 +16,8 @@ class ProductListingVC: UIViewController {
     
     var disposeBags = Set<AnyCancellable>()
 
+    let spinner = UIActivityIndicatorView(style: .large)
+    
     var titleLabel : UILabel {
         let title = UILabel(frame: .init(x: 0, y: 0, width: 80.0, height: 22))
         title.text = "Search Results"
@@ -33,12 +35,17 @@ class ProductListingVC: UIViewController {
 
         self.navigationItem.titleView = titleLabel
         
+        spinner.startAnimating()
+        tableview.backgroundView = spinner
+        
         viewModel.getProductList()
 
         viewModel.products.sink { [weak self] (value) in
             self?.lists = value
             self?.tableview.reloadData()
             self?.disposeBags.removeAll()
+            self?.spinner.stopAnimating()
+            self?.tableview.backgroundView = nil
         }.store(in: &disposeBags)
     }
 }
