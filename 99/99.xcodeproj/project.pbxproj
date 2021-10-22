@@ -150,9 +150,7 @@
 		1F08B31B2721CA0700043AC1 /* 99 */ = {
 			isa = PBXGroup;
 			children = (
-				1F0946C92721E6740063705E /* LaunchScreen.storyboard */,
-				1F0946BB2721E6650063705E /* Assets.xcassets */,
-				1F0946BF2721E6650063705E /* Info.plist */,
+				1F8DA089272364A100DA7C5F /* Resources */,
 				1F0946642721D55B0063705E /* Classes */,
 				1F0946612721D5160063705E /* AppDelegates */,
 				1F0946632721D54A0063705E /* Storyboards */,
@@ -298,6 +296,16 @@
 				1F8DA05727231E9500DA7C5F /* ProductDetailsTableViewCell.xib */,
 			);
 			path = ProductDetailsCells;
+			sourceTree = "<group>";
+		};
+		1F8DA089272364A100DA7C5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F0946C92721E6740063705E /* LaunchScreen.storyboard */,
+				1F0946BB2721E6650063705E /* Assets.xcassets */,
+				1F0946BF2721E6650063705E /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		78A0E2D258333AE7E42A0DFB /* Pods */ = {

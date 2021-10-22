@@ -15,6 +15,7 @@ class ProductDetailsVC: UIViewController {
     var disposeBags = Set<AnyCancellable>()
 
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var productImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -31,13 +32,7 @@ class ProductDetailsVC: UIViewController {
     
     func header() {
         guard let urlString = model?.photo else { return }
-        let imageView = UIImageView.init(frame: .init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height / 4.0))
-        imageView.contentMode = .scaleAspectFill
-        imageView.setImage(URL(string: urlString))
-        
-        let view = UIView.init(frame: .init(x: 0, y: 0, width: self.view.frame.width, height: (self.view.frame.height / 4.0 + 30.0)))
-        view.addSubview(imageView)
-        self.tableview.tableHeaderView = view
+        productImage.setImage(URL(string: urlString))
     }
     
     @IBAction func backAction(_ sender: Any) {

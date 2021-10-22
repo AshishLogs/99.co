@@ -51,8 +51,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dES-fH-Jwg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gTr-Jj-WGj">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="906"/>
+                                <rect key="frame" x="0.0" y="269" width="414" height="593"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="npY-nK-A4f" id="1Ug-VU-NS0"/>
@@ -74,16 +77,21 @@
                         <viewLayoutGuide key="safeArea" id="9Nr-jJ-pH3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gTr-Jj-WGj" firstAttribute="top" secondItem="sYc-tx-n1E" secondAttribute="top" constant="-44" id="4yl-VE-neZ"/>
+                            <constraint firstItem="gTr-Jj-WGj" firstAttribute="top" secondItem="dES-fH-Jwg" secondAttribute="bottom" id="57a-dC-Qqr"/>
+                            <constraint firstItem="9Nr-jJ-pH3" firstAttribute="trailing" secondItem="dES-fH-Jwg" secondAttribute="trailing" id="8Na-kO-qwW"/>
+                            <constraint firstItem="dES-fH-Jwg" firstAttribute="height" secondItem="sYc-tx-n1E" secondAttribute="height" multiplier="0.3" id="DpQ-Bc-Wsg"/>
                             <constraint firstItem="gTr-Jj-WGj" firstAttribute="trailing" secondItem="9Nr-jJ-pH3" secondAttribute="trailing" id="OQL-IC-lRg"/>
                             <constraint firstItem="DLY-RV-Ye6" firstAttribute="leading" secondItem="9Nr-jJ-pH3" secondAttribute="leading" constant="16" id="P1M-ds-rG5"/>
                             <constraint firstItem="gTr-Jj-WGj" firstAttribute="leading" secondItem="9Nr-jJ-pH3" secondAttribute="leading" id="R3V-wj-Dn6"/>
+                            <constraint firstItem="dES-fH-Jwg" firstAttribute="leading" secondItem="9Nr-jJ-pH3" secondAttribute="leading" id="fIr-kB-XY7"/>
                             <constraint firstItem="gTr-Jj-WGj" firstAttribute="bottom" secondItem="9Nr-jJ-pH3" secondAttribute="bottom" id="jM3-Kx-DQO"/>
+                            <constraint firstItem="dES-fH-Jwg" firstAttribute="top" secondItem="sYc-tx-n1E" secondAttribute="top" id="oOd-eR-BTw"/>
                             <constraint firstItem="DLY-RV-Ye6" firstAttribute="top" secondItem="9Nr-jJ-pH3" secondAttribute="top" id="t77-jR-O86"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="productImage" destination="dES-fH-Jwg" id="3AQ-Xg-KmC"/>
                         <outlet property="tableview" destination="gTr-Jj-WGj" id="IwS-PB-WKG"/>
                     </connections>
                 </viewController>
